@@ -17,5 +17,5 @@ setInterval(() => {
 // timer is set to 15m
 
 setInterval(() => {
-    randomAya(validator)
+    tweetRandomVerse(validator)
 }, 15*60*1000);

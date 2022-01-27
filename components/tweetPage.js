@@ -17,7 +17,7 @@ function tweetPage(pageNum = 1) {
       T.post('media/metadata/create', meta_params, function (err, data, response) {
         if (!err) {
           // now we can reference the media and post a tweet (media will attach to the tweet)
-          var params = { status: `الورد اليومي صفحه رقم ${pageNum} `, media_ids: [mediaIdStr] }
+          var params = { status: "الورد اليومي اثابكم الله ❤️", media_ids: [mediaIdStr] }
      
           T.post('statuses/update', params, function (err, data, response) {
             if (err){console.log(err);}
