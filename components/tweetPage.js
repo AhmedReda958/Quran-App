@@ -1,8 +1,8 @@
 import fs from 'fs';
 import dayCounter from './dayCounter.js';
-import T from "./twit-congig.js"
+import T from "./twit-config.js"
 
-function tweetPage(pageNum = 1) {
+function tweetPage(pageNum) {
     
     var b64content = fs.readFileSync(`./quran-images/${pageNum}.jpg` , { encoding: 'base64' })
      
@@ -11,7 +11,7 @@ function tweetPage(pageNum = 1) {
       // now we can assign alt text to the media, for use by screen readers and
       // other text-based presentations and interpreters
       var mediaIdStr = data.media_id_string
-      var altText = "Small flowers in a planter on a sunny balcony, blossoming."
+      var altText = "الورد اليومي"
       var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
      
       T.post('media/metadata/create', meta_params, function (err, data, response) {

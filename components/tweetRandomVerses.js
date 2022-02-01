@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import T from "./twit-congig.js"
+import T from "./twit-config.js"
 
 
 // tweet ayat
@@ -11,7 +11,7 @@ const Tweet =(text)=>{
 // check ayat length 
 const validator =(aya , length =140 )=>{
     if (aya.length <= length) {
-         Tweet(`﴿${aya}﴾`);
+         Tweet(`﴿ ${aya} ﴾`);
         
     }else tweetRandomVerse(validator)
 }
